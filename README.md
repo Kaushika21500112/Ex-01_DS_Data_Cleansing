@@ -32,12 +32,16 @@ df['rating']=df['rating'].fillna(df['rating'].mean())
 df['current_overall_rank']=df['current_overall_rank'].fillna(df['current_overall_rank'].median())
 df['watchers']=df['watchers'].fillna(df['watchers'].median())
 print()
-print("Checking for Null after cleaning data:")
+print("Cleansed data:")
+print(df,"\n")
+print("Checking for Null after cleansing data:")
 print(df.isnull().sum())
+#saving clean data to file 
 df.to_csv('Data_set.csv', index=False)
 ```
 # OUTPUT:
-![](output.png)
+![](output1.png)
+![](output2.png)
 
 # RESULT:
-Thus, the given data is read, cleaned and the cleaned dataa is saved into the file.
+Thus, the given data is read, cleansed and the clean data is saved into the file.
